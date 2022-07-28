@@ -1,16 +1,16 @@
-package com.geissonlucaso.soccernews.ui.notifications;
+package com.geissonlucaso.soccernews.ui.news;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class NotificationsViewModel extends ViewModel {
+public class NewsViewModel extends ViewModel {
 
     private final MutableLiveData<String> mText;
 
-    public NotificationsViewModel() {
+    public NewsViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is notifications fragment");
+        mText.setValue("This is news fragment");
     }
 
     public LiveData<String> getText() {
