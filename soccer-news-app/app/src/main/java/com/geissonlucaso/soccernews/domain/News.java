@@ -1,10 +1,25 @@
 package com.geissonlucaso.soccernews.domain;
 
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity
 public class News {
+    @PrimaryKey
+    private int id;
     private String title;
     private String description;
     private String image;
     private String link;
+    private Boolean favorite = false;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getTitle() {
         return title;
@@ -36,5 +51,13 @@ public class News {
 
     public void setLink(String link) {
         this.link = link;
+    }
+
+    public Boolean getFavorite() {
+        return favorite;
+    }
+
+    public void setFavorite(Boolean favorite) {
+        this.favorite = favorite;
     }
 }
