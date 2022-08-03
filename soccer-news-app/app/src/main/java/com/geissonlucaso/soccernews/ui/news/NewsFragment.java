@@ -33,6 +33,22 @@ public class NewsFragment extends Fragment {
                 }
             }));
         });
+
+        newsViewModel.getState().observe(getViewLifecycleOwner(), state -> {
+           switch (state) {
+               case DOING:
+                   // TODO: SwiperefreshLayout. Start.
+                   break;
+               case  DONE:
+                   // TODO: SwiperefreshLayout. Stop.
+                   break;
+               case ERROR:
+                   // TODO: SwiperefreshLayout. Stop.
+                   // TODO: Show generic error.
+                   break;
+           }
+        });
+
         return root;
     }
 
