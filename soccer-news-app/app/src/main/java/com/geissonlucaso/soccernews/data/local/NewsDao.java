@@ -15,5 +15,5 @@ public interface NewsDao {
     List<News> loadFavoriteNews();
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    void insert(News news);
+    void save(News news);
 }
