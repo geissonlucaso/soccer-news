@@ -10,12 +10,8 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
-import com.geissonlucaso.soccernews.ui.MainActivity;
 import com.geissonlucaso.soccernews.databinding.FragmentFavoritesBinding;
-import com.geissonlucaso.soccernews.domain.News;
 import com.geissonlucaso.soccernews.ui.adapter.NewsAdapter;
-
-import java.util.List;
 
 public class FavoritesFragment extends Fragment {
 
@@ -29,8 +25,7 @@ public class FavoritesFragment extends Fragment {
 
         loadFavoriteNews();
 
-        View root = binding.getRoot();
-        return root;
+        return binding.getRoot();
     }
 
     private void loadFavoriteNews() {

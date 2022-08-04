@@ -1,7 +1,6 @@
 package com.geissonlucaso.soccernews.ui.favorites;
 
 import androidx.lifecycle.LiveData;
-import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
 import com.geissonlucaso.soccernews.data.SoccerNewsRepository;

@@ -16,9 +16,9 @@ public class SoccerNewsRepository {
     private static final String LOCAL_DB_NAME = "soccer-news";
     //endregion
 
-    //region Fields. API access(Restrofit) e DB access(Room).
-    private SoccerNewsApi remoteApi;
-    private SoccerNewsDb localDb;
+    //region Fields. API access(Retrofit) e DB access(Room).
+    private final SoccerNewsApi remoteApi;
+    private final SoccerNewsDb localDb;
 
     public SoccerNewsApi getRemoteApi() {
         return remoteApi;
