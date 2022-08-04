@@ -11,4 +11,6 @@
     <color name="favorite_enable">#FF6200EE</color>
     <color name="favorite_unable">#737373</color>
 
+    <color name="share_gray">#737373</color>
+
 </resources>

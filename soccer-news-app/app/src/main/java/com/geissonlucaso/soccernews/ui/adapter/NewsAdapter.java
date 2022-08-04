@@ -69,6 +69,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
 
         int favoriteColor = news.getFavorite() ? R.color.favorite_enable : R.color.favorite_unable;
         holder.binding.ivFavorite.setColorFilter(context.getResources().getColor(favoriteColor));
+        holder.binding.ivShare.setColorFilter(context.getResources().getColor(R.color.share_gray));
     }
 
     @Override

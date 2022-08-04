@@ -10,7 +10,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
-import com.geissonlucaso.soccernews.MainActivity;
+import com.geissonlucaso.soccernews.ui.MainActivity;
 import com.geissonlucaso.soccernews.databinding.FragmentNewsBinding;
 import com.geissonlucaso.soccernews.ui.adapter.NewsAdapter;
 
@@ -27,10 +27,7 @@ public class NewsFragment extends Fragment {
         binding.rvNews.setLayoutManager(new LinearLayoutManager(getContext()));
         newsViewModel.getNews().observe(getViewLifecycleOwner(), news -> {
             binding.rvNews.setAdapter(new NewsAdapter(news, updatedNews -> {
-                MainActivity activity = (MainActivity) getActivity();
-                if (activity != null) {
-                    activity.getDb().NewsDao().save(updatedNews);
-                }
+                newsViewModel.saveNews(updatedNews);
             }));
         });
 
